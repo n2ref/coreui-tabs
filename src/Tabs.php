@@ -35,9 +35,8 @@ class Tabs {
 
     /**
      * @param string $resource
-     * @param string $url
      */
-    public function __construct($resource, $url) {
+    public function __construct($resource) {
 
         $this->resource = $resource;
 
