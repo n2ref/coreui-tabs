@@ -1,0 +1,42 @@
+<div class="text-center mb-3" id="coreui-tabs-<%= id %>">
+    <div class="text-start">
+        <% if (title) { %>
+        <h4><%- title %></h4>
+        <% } %>
+        <% if (subtitle) { %>
+        <p class="text-muted"><%- subtitle %></p>
+        <% } %>
+
+        <% if (typeof tabs === 'object' && tabs.length > 0) { %>
+            <% if (tabsPosition === 'top-left' || tabsPosition === 'top-center' || tabsPosition === 'top-right') { %>
+            <%- tabsContent %>
+
+            <div class="coreui-tabs-content">
+                <%- renderContent %>
+            </div>
+
+            <% } else if (tabsPosition === 'left' || tabsPosition === 'left-sideways') { %>
+            <div class="d-flex">
+                <div class="me-3" style="width: <%= tabsWidth %>px"><%- tabsContent %></div>
+
+                <div class="coreui-tabs-content flex-grow-1">
+                    <%- renderContent %>
+                </div>
+            </div>
+
+            <% } else if (tabsPosition === 'right' || tabsPosition === 'right-sideways') { %>
+            <div class="d-flex">
+                <div class="coreui-tabs-content flex-grow-1 pe-3">
+                    <%- renderContent %>
+                </div>
+                <div style="width: <%= tabsWidth %>px"><%- tabsContent %></div>
+            </div>
+            <% } %>
+
+        <% } else { %>
+        <div class="coreui-tabs-content">
+            <%- renderContent %>
+        </div>
+        <% } %>
+    </div>
+</div>
