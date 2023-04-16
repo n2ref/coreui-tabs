@@ -1,6 +1,6 @@
 {
   "name": "coreui-tabs",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "CoreUI Tabs",
   "scripts": {
     "build_all": "gulp build_tpl && gulp build_dependents && gulp build_js && gulp build_css",
@@ -36,8 +36,7 @@
     "js",
     "frontend",
     "framework",
-    "tabs",
-    "card"
+    "tabs"
   ],
   "author": "shabuninil",
   "license": "ISC",
